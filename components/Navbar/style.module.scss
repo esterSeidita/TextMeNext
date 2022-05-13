@@ -1,0 +1,38 @@
+@import "./../../styles/variables.scss";
+@import "./../../styles/mixins.scss";
+
+.Navbar {
+  @include flex();
+  background-color: $mainColor;
+  color: $navbarTextColor;
+  padding: 20px;
+
+  &__toggleBtn {
+    margin-left: auto;
+  }
+
+  &__extendedNavbar {
+    width: 100vw;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    @include flex($justify: center, $flow: column wrap);
+
+    >*{
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        border-bottom: 1px solid rgb(149, 149, 160);
+    }
+
+  }
+}
+
+@media all and (min-width: 700px) {
+  .Navbar {
+    &__toggleBtn {
+      display: none;
+    }
+  }
+}

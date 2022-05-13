@@ -1,0 +1,23 @@
+@import "./../../styles/variables.scss";
+@import "./../../styles/mixins.scss";
+
+.Actions {
+    @include flex($justify:center);
+    >div{
+        font-size: 2.4em;
+        background-color: $navbarTextColor;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        cursor: pointer;
+        >svg{
+            position: absolute; top:50%; left:50%; transform: translate(-50%,-50%);
+        }
+    }
+    position: absolute; bottom: 0; left: 50%;
+    transform: translate(-50%);
+    background-color: $mainColor;
+    width: 100vw !important;
+    padding: 1em;
+}

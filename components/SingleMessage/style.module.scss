@@ -1,0 +1,27 @@
+@import "./../../styles/variables.scss";
+@import "./../../styles/mixins.scss";
+
+.SingleMessage {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 75%);
+  -webkit-box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 75%);
+  -moz-box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 75%);
+  cursor: pointer;
+
+  > * {
+    padding: 5px 15px;
+    text-transform: capitalize;
+  }
+
+  &__Header {
+    background-color: $secondColor;
+    color: $mainColor;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    @include flex($justify: space-between);
+  }
+}

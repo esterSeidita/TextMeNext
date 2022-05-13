@@ -1,0 +1,10 @@
+@import "./../../styles/variables.scss";
+
+.Footer{
+    background-color: $mainColor;
+    color: $navbarTextColor;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute; bottom: 0;
+    width: 100vw;
+}

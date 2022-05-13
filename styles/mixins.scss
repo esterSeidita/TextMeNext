@@ -1,0 +1,19 @@
+@mixin flex($flow: row wrap, $justify: flex-start, $align: center, $gap: 10px) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin btnStyle {
+  padding: 15px;
+  width: 100%;
+  display: block;
+  background-color: $mainColor;
+  border-radius: 5px;
+  border: none;
+  color: $navbarTextColor;
+  font-weight: bold;
+  font-size: 18px;
+}

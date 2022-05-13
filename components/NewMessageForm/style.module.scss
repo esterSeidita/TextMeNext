@@ -1,0 +1,27 @@
+@import "./../../styles/variables.scss";
+@import "./../../styles/mixins.scss";
+
+.NewMessageForm {
+  padding: 20px;
+
+  form {
+    @include flex();
+  }
+
+  &__mainForm {
+    width: 100%;
+  }
+
+  &__inputGroup {
+    @include flex($justify: space-between);
+    margin: 5px 0;
+
+    input, textarea {
+      width: 100%;
+      resize: none;
+    }
+  }
+  &__submitBtn {
+    @include btnStyle;
+  }
+}
