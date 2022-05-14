@@ -1,31 +1,54 @@
 import styles from "./style.module.scss";
 
-import { POST } from "./../../utils";
+import { POST, UPDATE } from "./../../utils";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
-export default function NewMessageForm({ reRender }) {
+export default function NewMessageForm({
+  method,
+  reRender,
+  title,
+  GetDataOnChange,
+  data = "",
+}) {
   const [inputs, setInputs] = useState({});
+  const router = useRouter();
+  const { id } = router.query;
+
+  useEffect(() => {
+    if(method==="UPDATE"){
+      GetDataOnChange(inputs);
+    }
+  }, [inputs]);
 
   const changeValue = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    console.log([name])
 
     setInputs((val) => ({ ...val, [name]: value }));
   };
 
   const submit = (e) => {
     e.preventDefault();
-    POST("messages", inputs).then(() => {
-      reRender();
-      setInputs({});
-    });
+
+    method === "POST" &&
+      POST("messages", { ...inputs, date: new Date() }).then(() => {
+        reRender((val) => !val);
+        setInputs({});
+      });
+
+    method === "UPDATE" &&
+      UPDATE(`messages/${id}`, { ...inputs, date: new Date() }).then(() => {
+        reRender((val) => !val);
+        setInputs({});
+        router.push("/")
+      });
   };
 
   return (
     <div className={styles.NewMessageForm}>
-      <h3>Manda un messaggio!</h3>
+      <h3>{title}</h3>
       <form onSubmit={submit}>
         <div className={styles.NewMessageForm__mainForm}>
           <div className={styles.NewMessageForm__inputGroup}>
@@ -34,17 +57,18 @@ export default function NewMessageForm({ reRender }) {
               type="text"
               name="sender"
               id="sender"
-              value={inputs.sender || ""}
+              value={data.sender || inputs.sender || ""}
               onChange={changeValue}
             />
           </div>
+          {/* <input type="hidden" name="date" value={new Date()} /> */}
           <div className={styles.NewMessageForm__inputGroup}>
             <label htmlFor="text">Messaggio</label>
             <textarea
               name="text"
               id="text"
               rows="3"
-              value={inputs.text || ""}
+              value={data.text || inputs.text || ""}
               onChange={changeValue}
             ></textarea>
           </div>

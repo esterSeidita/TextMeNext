@@ -7,9 +7,10 @@ import {DELETE} from "../../utils";
 
 export default function Actions() {
   const router = useRouter();
+  const {id} = router.query;
 
   const deleteRecord = () => {
-    DELETE(`messages/${router.query.id}`).then(() => {
+    DELETE(`messages/${id}`).then(() => {
       router.push("/")
     }).catch((err) => {
       console.log(err);
@@ -21,7 +22,7 @@ export default function Actions() {
       <div className={styles.Actions__LikeBtn}>
         <AiFillLike />
       </div>
-      <div className={styles.Actions__UpdateBtn}>
+      <div onClick={()=>router.push(`/update/${id}`)} className={styles.Actions__UpdateBtn}>
         <BsFillGearFill />
       </div>
       <div onClick={deleteRecord} className={styles.Actions__DeleteBtn}>
