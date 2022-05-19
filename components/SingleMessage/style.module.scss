@@ -1,5 +1,6 @@
 @import "./../../styles/variables.scss";
 @import "./../../styles/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
 
 .SingleMessage {
   width: 100%;
@@ -11,14 +12,21 @@
   -webkit-box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 75%);
   -moz-box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 75%);
   cursor: pointer;
+  background-color: $secondColor;
 
   > * {
     padding: 5px 15px;
     text-transform: capitalize;
   }
 
+  &__Message {
+    font-family: "Square Peg", cursive;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
   &__Header {
-    background-color: $secondColor;
+    background-color: $lowOpacity;
     color: $mainColor;
     margin: 0;
     border-radius: 10px 10px 0 0;

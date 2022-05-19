@@ -3,9 +3,9 @@
 
 .Navbar {
   @include flex();
-  background-color: $mainColor;
+  // background-color: $mainColor;
   color: $navbarTextColor;
-  padding: 20px;
+  padding: 30px;
 
   &__toggleBtn {
     margin-left: auto;

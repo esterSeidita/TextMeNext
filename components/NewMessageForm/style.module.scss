@@ -3,9 +3,21 @@
 
 .NewMessageForm {
   padding: 20px;
+  background-color: $secondColor;
+  border-radius: 10px;
+
+  &__title{
+    color: $mainColor;
+    margin-top: 0;
+    text-decoration: underline;
+  }
 
   form {
     @include flex();
+    label{
+      font-weight: 500;
+      color: $mainColor;
+    }
   }
 
   &__mainForm {
@@ -19,6 +31,10 @@
     input, textarea {
       width: 100%;
       resize: none;
+      background-color: $lowOpacity;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
     }
   }
   &__submitBtn {

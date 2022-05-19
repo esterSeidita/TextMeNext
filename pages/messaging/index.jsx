@@ -1,18 +1,17 @@
 import { useState } from "react";
-import MessageList from "./../components/MessageList";
-import NewMessageForm from "./../components/NewMessageForm";
+import MessageList from "./../../components/MessageList";
+import NewMessageForm from "./../../components/NewMessageForm";
 
-import MainLayout from "./../components/MainLayout";
+import MainLayout from "./../../components/MainLayout";
 import styles from "./style.module.scss";
-import HeroFullViewport from "../components/HeroFullViewport";
+// import HeroFullViewport from "../components/HeroFullViewport";
 
-export default function Home() {
+export default function Messaging() {
   const [render, setRender] = useState(false);
 
   return (
     <MainLayout>
-
-      <div className={styles.Home}>
+      <div className={styles.Messaging}>
         {/* <HeroFullViewport/> */}
         <NewMessageForm
           method="POST"

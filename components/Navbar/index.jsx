@@ -24,11 +24,6 @@ export default function Navbar() {
               <li>Homepage</li>
             </a>
           </Link>
-          <Link href="/contatti">
-            <a disabled>
-              <li>Contatti</li>
-            </a>
-          </Link>
         </ul>
       )}
     </nav>

@@ -17,7 +17,7 @@ export default function NewMessageForm({
   const { id } = router.query;
 
   useEffect(() => {
-    if(method==="UPDATE"){
+    if (method === "UPDATE") {
       GetDataOnChange(inputs);
     }
   }, [inputs]);
@@ -42,13 +42,13 @@ export default function NewMessageForm({
       UPDATE(`messages/${id}`, { ...inputs, date: new Date() }).then(() => {
         reRender((val) => !val);
         setInputs({});
-        router.push("/")
+        router.push("/");
       });
   };
 
   return (
     <div className={styles.NewMessageForm}>
-      <h3>{title}</h3>
+      <h3 className={styles.NewMessageForm__title}>{title}</h3>
       <form onSubmit={submit}>
         <div className={styles.NewMessageForm__mainForm}>
           <div className={styles.NewMessageForm__inputGroup}>
