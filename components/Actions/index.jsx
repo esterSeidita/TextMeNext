@@ -22,11 +22,11 @@ export default function Actions() {
       <div onClick={()=>router.push(`/update/${id}`)} className={styles.Actions__UpdateBtn}>
         <BsFillGearFill />
       </div>
-      <div onClick={deleteRecord} className={styles.Actions__DeleteBtn}>
-        <AiFillDelete />
-      </div>
       <div onClick={()=>{}} className={styles.Actions__LikeBtn}>
         <AiFillHeart />
+      </div>
+      <div onClick={deleteRecord} className={styles.Actions__DeleteBtn}>
+        <AiFillDelete />
       </div>
       <div onClick={()=>router.push("/")} className={styles.Actions__GoBackBtn}>
         <AiOutlineRollback />

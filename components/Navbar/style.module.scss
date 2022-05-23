@@ -3,7 +3,6 @@
 
 .Navbar {
   @include flex();
-  // background-color: $mainColor;
   color: $navbarTextColor;
   padding: 30px;
 
@@ -25,7 +24,6 @@
         text-align: center;
         border-bottom: 1px solid rgb(149, 149, 160);
     }
-
   }
 }
 

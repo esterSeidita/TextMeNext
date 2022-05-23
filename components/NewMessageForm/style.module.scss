@@ -5,6 +5,8 @@
   padding: 20px;
   background-color: $secondColor;
   border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
 
   &__title{
     color: $mainColor;
