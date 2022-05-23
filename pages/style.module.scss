@@ -1,5 +1,5 @@
 @import "./../styles/mixins.scss";
 
 .Home{
-    @include flex($align:flex-start);
+    @include flex($align:flex-start, $justify:center);
 }

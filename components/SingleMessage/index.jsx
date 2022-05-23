@@ -6,12 +6,17 @@ export default function SingleMessage({ data }) {
   const { text, sender, date } = data;
   const d = new Date();
   const getDateFromISO = (date) => {
-    const options = {
+    const dateOptions = {
       dateStyle: "full",
     };
 
+    const timeOptions = {
+      hour: "2-digit",
+      minute: "2-digit"
+    }
+
     const objDate = new Date(date);
-    return objDate.toLocaleDateString("it-IT", options);
+    return objDate.toLocaleDateString("it-IT", dateOptions) + " - " + objDate.toLocaleTimeString("it-IT", timeOptions);
   };
   
   return (

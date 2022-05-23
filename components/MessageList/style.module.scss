@@ -2,7 +2,8 @@
 
 .MessageList{
     @include flex($flow:column, $justify:center);
-    flex-grow: 1;
-    max-width: 100%;
+    // flex-grow: 1;
+    width: 100%;
+    max-width: 700px;
     margin-bottom: 150px;
 }
