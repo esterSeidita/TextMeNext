@@ -4,7 +4,9 @@
 
 .SingleMessage {
   width: 100%;
+  max-width: 500px;
   min-height: 200px;
+  margin: 0 auto;
   overflow: hidden;
   height: auto;
   border-radius: 10px;

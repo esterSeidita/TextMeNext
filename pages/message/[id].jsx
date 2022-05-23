@@ -9,11 +9,14 @@ import Actions from "../../components/Actions";
 export default function MessageById() {
   const router = useRouter();
   const [data, setData] = useState({});
+  const { id } = router.query;
 
   useEffect(() => {
-    const { id } = router.query;
-    GET(`messages/${id}`).then((data) => setData(data));
+    id && localStorage.setItem("currentID", id);
+    const localID = localStorage.getItem("currentID")
+    GET(`messages/${localID !== null ? localID : id}`).then((data) => setData(data));
   }, []);
+
   return (
     <ActionsLayout>
       <div className={styles.SingleMessagePage}>

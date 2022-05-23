@@ -1,0 +1,7 @@
+@import "./../../styles/mixins.scss";
+
+.Update{
+    @include mainBgStyle;
+    min-height: 100vh;
+    @include flex($flow:column, $justify:center);
+}

@@ -20,7 +20,6 @@ export default function Update() {
   }, []);
 
   const GetDataOnChange = (inputs) => {
-    console.log(inputs);
     setData((data) => ({ ...data, sender: inputs.sender, text: inputs.text }));
   };
 

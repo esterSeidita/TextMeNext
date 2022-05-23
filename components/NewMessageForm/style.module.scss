@@ -37,7 +37,7 @@
       padding: 10px;
     }
   }
-  &__submitBtn {
+  &__submitBtn, &__backBtn {
     @include btnStyle;
   }
 }

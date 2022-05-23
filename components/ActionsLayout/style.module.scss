@@ -1,11 +1,14 @@
 @import "./../../styles/variables.scss";
+@import "./../../styles/mixins.scss";
 
 .ActionsLayout {
   > * {
     padding: 30px;
   }
   &__Navbar {
-    background-color: $mainColor;
+
+    @include mainBgStyle;
+  
     h1 {
       text-align: center;
       font-size: 30px;

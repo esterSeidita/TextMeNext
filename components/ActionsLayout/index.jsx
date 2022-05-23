@@ -1,6 +1,5 @@
 import styles from "./style.module.scss";
 import Logo from "./../Logo";
-import Actions from "./../Actions";
 
 export default function ActionsLayout({ children }) {
   return (

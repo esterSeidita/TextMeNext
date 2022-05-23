@@ -1,4 +1,8 @@
+@import "./../../styles/mixins.scss";
+
 .SingleMessagePage{
+    @include mainBgStyle;
+    min-height: 100vh;
     >div:first-child{
         max-width: 500px;
         margin: 0 auto;

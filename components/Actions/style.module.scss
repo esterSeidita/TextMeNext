@@ -5,10 +5,10 @@
     @include flex($justify:center);
     >div{
         font-size: 2em;
-        background-color: $navbarTextColor;
+        background-color: $secondColor;
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
+        width: 62px;
+        height: 62px;
         position: relative;
         cursor: pointer;
         >svg{
@@ -17,10 +17,22 @@
     }
     position: absolute; bottom: 0; left: 50%;
     transform: translate(-50%);
-    background-color: $mainColor;
+
     width: 100vw !important;
     padding: 1em;
 
     position: absolute; bottom: 0;
     width: 100vw;
+
+    &__LikeBtn{
+        color: rgb(176 47 67);
+    }
+
+    &__UpdateBtn{
+        color: rgb(66 118 68);
+    }
+
+    &__DeleteBtn{
+        color: #5f5c5c;
+    }
 }

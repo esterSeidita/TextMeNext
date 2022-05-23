@@ -78,6 +78,17 @@ export default function NewMessageForm({
           type="submit"
           onClick={submit}
         />
+        {method === "UPDATE" && (
+          <button
+            onClick={(e) => {
+              router.push(`/message/${id}`, null, { shallow: true });
+              e.preventDefault();
+            }}
+            className={styles.NewMessageForm__backBtn}
+          >
+            Torna Indietro
+          </button>
+        )}
       </form>
     </div>
   );
