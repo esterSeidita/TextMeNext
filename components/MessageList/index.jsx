@@ -5,6 +5,8 @@ import styles from "./style.module.scss";
 
 export default function MessageList({ render }) {
   const [FetchData, setFetchData] = useState([]);
+  const [likeStatus, setLikeStatus] = useState([]);
+
   useEffect(() => {
     GET("messages").then((data) => setFetchData(data));
   }, [render]);
@@ -14,7 +16,7 @@ export default function MessageList({ render }) {
       {FetchData &&
         FetchData.splice(0)
           .reverse()
-          .map((data, i) => <SingleMessage key={i} data={data} />)}
+          .map((data) => <SingleMessage key={data.id} data={data} liked={false}/>)}
     </div>
   );
 }
