@@ -1,5 +1,9 @@
 @import "./../styles/mixins.scss";
 
 .Home{
-    @include flex($align:flex-start, $justify:center);
+    @include flex($align:flex-start, $justify:center, $flow:row wrap);
+    &__columnWrapper{
+        width: 100%;
+        max-width: 500px;
+    }
 }

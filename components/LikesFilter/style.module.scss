@@ -1,0 +1,21 @@
+@import "./../../styles/variables.scss";
+
+.LikesFilter {
+  background-color: $secondColor;
+  padding: 2em;
+  margin: 1em auto;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  
+  &__checkbox {
+    -ms-transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    padding: 10px;
+    margin-left: 20px;
+  }
+}

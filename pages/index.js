@@ -1,45 +1,32 @@
-import { useEffect, useState } from "react";
-// import { useSelector, useDispatch } from "react-redux";
-
+import { useState } from "react";
 import MessageList from "./../components/MessageList";
 import NewMessageForm from "./../components/NewMessageForm";
 
 import MainLayout from "./../components/MainLayout";
 import styles from "./style.module.scss";
+import LikesFilter from "../components/LikesFilter/LikesFilter";
 
 export default function Home() {
   const [render, setRender] = useState(false);
-  // const store = useSelector((state) => state);
-  // const dispatch = useDispatch();
+  const [showOnlyLiked, setSwowOnlyLiked] = useState(false);
 
-  // useEffect(() => {
-  //   console.log(store);
-  // }, []);
+  const filterList = () => {
+    setSwowOnlyLiked((prev) => !prev)
+  }
 
   return (
     <MainLayout>
-      {/* <button
-        onClick={() => {
-          dispatch({ type: "INCREMENT", payload: 1 });
-          console.log(store);
-        }}
-      >
-        Add
-      </button> */}
-
       <div className={styles.Home}>
-        {/* <HeroFullViewport/> */}
+      <div className={styles.Home__columnWrapper}>
         <NewMessageForm
           method="POST"
           title="Manda un messaggio!"
           reRender={setRender}
         />
-        <MessageList render={render} />
+        <LikesFilter filterList={filterList}/>
+      </div>
+        <MessageList render={render} showOnlyLiked={showOnlyLiked} />
       </div>
     </MainLayout>
   );
 }
-
-// Home.getLayout = function getLayout(page) {
-//   return <MainLayout>{page}</MainLayout>;
-// };
