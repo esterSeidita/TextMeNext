@@ -62,7 +62,6 @@ export default function NewMessageForm({
               onChange={changeValue}
             />
           </div>
-          {/* <input type="hidden" name="date" value={new Date()} /> */}
           <div className={styles.NewMessageForm__inputGroup}>
             <label htmlFor="text">Messaggio</label>
             <textarea

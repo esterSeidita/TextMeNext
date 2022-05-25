@@ -21,8 +21,7 @@ export default function Actions({ data, reRender }) {
   };
 
   const changeLikeStatus = () => {
-    const likedMessage = localStorage.getItem("likedMessage") || [];
-    const localLikedMessage = JSON.parse(likedMessage);
+    const localLikedMessage = localStorage.getItem("likedMessage") !== null ?  JSON.parse(localStorage.getItem("likedMessage")) : [];
     if (
       localLikedMessage.filter(
         (obj) => obj.date === data.date && obj.id === data.id
