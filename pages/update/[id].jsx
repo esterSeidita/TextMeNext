@@ -17,6 +17,7 @@ export default function Update() {
     GET(`messages/${id}`)
       .then((data) => setData(data))
       .catch((e) => console.log(e));
+    //eslint-disable-next-line
   }, []);
 
   const GetDataOnChange = (inputs) => {

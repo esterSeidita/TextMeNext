@@ -22,6 +22,7 @@ export default function MessageById() {
     GET(`messages/${localID !== null ? localID : id}`).then((data) =>
       setData(data)
     );
+    //eslint-disable-next-line
   }, []);
 
   return (

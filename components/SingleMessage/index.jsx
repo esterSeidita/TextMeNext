@@ -24,7 +24,7 @@ export default function SingleMessage({ data }) {
   };
 
   const isLiked = () => {
-    const localLikes = !!window
+    const localLikes = typeof window !== 'undefined'
       ? window.localStorage.getItem("likedMessage") !== null
         ? JSON.parse(localStorage.getItem("likedMessage"))
         : []

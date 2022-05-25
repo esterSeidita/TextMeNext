@@ -20,6 +20,7 @@ export default function NewMessageForm({
     if (method === "UPDATE") {
       GetDataOnChange(inputs);
     }
+    //eslint-disable-next-line
   }, [inputs]);
 
   const changeValue = (e) => {
