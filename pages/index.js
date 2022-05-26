@@ -20,7 +20,7 @@ export default function Home() {
       <div className={styles.Home__columnWrapper}>
         <NewMessageForm
           method="POST"
-          title="Manda un messaggio!"
+          title="Scrivi una nota..."
           reRender={setRender}
         />
         <LikesFilter filterList={filterList}/>

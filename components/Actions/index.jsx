@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import styles from "./style.module.scss";
 
 import { BsFillGearFill } from "react-icons/bs";
-import { AiFillDelete, AiFillHeart, AiOutlineRollback } from "react-icons/ai";
+import { AiFillDelete, AiOutlineRollback, AiFillStar } from "react-icons/ai";
 
 import { DELETE } from "../../utils";
 
@@ -54,7 +54,7 @@ export default function Actions({ data, reRender }) {
         onClick={() => changeLikeStatus()}
         className={styles.Actions__LikeBtn}
       >
-        <AiFillHeart />
+        <AiFillStar />
       </div>
       <div onClick={deleteRecord} className={styles.Actions__DeleteBtn}>
         <AiFillDelete />

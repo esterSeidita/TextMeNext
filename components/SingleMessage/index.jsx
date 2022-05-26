@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import { AiFillHeart } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { useRouter } from "next/router";
 
 export default function SingleMessage({ data }) {
@@ -46,7 +46,7 @@ export default function SingleMessage({ data }) {
 
       {isLiked() && (
         <span className={styles.SingleMessage__HeartIcon}>
-          <AiFillHeart />
+          <AiFillStar />
         </span>
       )}
     </div>
