@@ -1,4 +1,4 @@
-const BASE_URL = "https://edgemony-backend.herokuapp.com/";
+const BASE_URL = "https://ester-backend.herokuapp.com/";
 
 export const GET = (type) =>
   fetch(`${BASE_URL}${type}`).then((res) => res.json());
